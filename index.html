@@ -333,7 +333,7 @@
     // NETLIFY'DAGI DO'KON MANZILINI SHU YERGA YOZING
     // Masalan: "https://kinder-studio.netlify.app/"
     // =========================================================================
-    const NETLIFY_APP_URL = "https://fabulous-lokum-e8d8cc.netlify.app";
+    const NETLIFY_APP_URL = "https://fabulous-lokum-e8d8cc.netlify.app/";
 
     function bounceKinder() {
         const el = document.getElementById('animatedKinder');
@@ -347,7 +347,7 @@
         const btn = document.getElementById('orderBtn');
         const hint = document.getElementById('statusHint');
 
-        if (!NETLIFY_APP_URL || NETLIFY_APP_URL.includes("https://fabulous-lokum-e8d8cc.netlify.app")) {
+        if (!NETLIFY_APP_URL || NETLIFY_APP_URL.includes("https://fabulous-lokum-e8d8cc.netlify.app/")) {
             hint.innerText = "Kod ichidagi NETLIFY_APP_URL manzilini o'zgartiring!";
             hint.style.color = "#f87171";
             return;
