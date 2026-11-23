@@ -38,7 +38,6 @@
             position: relative;
         }
 
-        /* Orqa fon yorug'lik nurlari */
         .ambient-glow {
             position: fixed;
             inset: 0;
@@ -67,7 +66,6 @@
             50% { opacity: 0.85; transform: scale(1.2) translateY(-14px); }
         }
 
-        /* Asosiy oyna */
         .gateway-card {
             position: relative;
             z-index: 2;
@@ -99,7 +97,6 @@
             margin-bottom: 18px;
         }
 
-        /* ================= ANIMATSION KINDER ================= */
         .kinder-stage {
             height: 220px;
             display: flex;
@@ -144,7 +141,6 @@
             50% { transform: translateY(-12px) rotate(2.5deg); }
         }
 
-        /* Kinder shokolad tuxumi / sovg'a shakli */
         .kinder-egg {
             width: 100%;
             height: 100%;
@@ -164,7 +160,6 @@
             position: relative;
         }
 
-        /* Oq sutli to'lqin chiziq */
         .kinder-wave {
             position: absolute;
             bottom: -1px;
@@ -245,7 +240,6 @@
             margin-bottom: 22px;
         }
 
-        /* Asosiy "Zakaz berish" tugmasi */
         .order-cta-btn {
             width: 100%;
             padding: 16px 20px;
@@ -298,7 +292,6 @@
 <main class="gateway-card">
     <div class="badge">✨ Shaxsiy Sovg'alar & Tortlar</div>
 
-    <!-- Animatsion Kinder -->
     <div class="kinder-stage" onclick="bounceKinder()" title="Bosib ko'ring">
         <div class="kinder-halo"></div>
         <div class="kinder-3d" id="animatedKinder">
@@ -329,10 +322,6 @@
 </main>
 
 <script>
-    // =========================================================================
-    // NETLIFY'DAGI DO'KON MANZILINI SHU YERGA YOZING
-    // Masalan: "https://kinder-studio.netlify.app/"
-    // =========================================================================
     const NETLIFY_APP_URL = "https://fabulous-lokum-e8d8cc.netlify.app/";
 
     function bounceKinder() {
@@ -347,15 +336,9 @@
         const btn = document.getElementById('orderBtn');
         const hint = document.getElementById('statusHint');
 
-        if (!NETLIFY_APP_URL || NETLIFY_APP_URL.includes("https://fabulous-lokum-e8d8cc.netlify.app/")) {
-            hint.innerText = "Kod ichidagi NETLIFY_APP_URL manzilini o'zgartiring!";
-            hint.style.color = "#f87171";
-            return;
-        }
-
         btn.classList.add('loading');
         btn.innerHTML = "<span>Do'kon ochilmoqda...</span>";
-        hint.innerText = "Dokonga o'tkazilmoqda...";
+        hint.innerText = "Netlify ilovasiga o'tkazilmoqda...";
 
         setTimeout(() => {
             window.location.href = NETLIFY_APP_URL;
